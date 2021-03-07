@@ -1,37 +1,16 @@
-<html>
-    <head>
-        <title>Rock, Paper, Scissors</title>
-    </head>
+<!DOCTYPE html>
+<html lang="en">
 
-    <body>
-        <script>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock, Paper, Scissors</title>
+</head>
 
-            function computerPlay() {
-                let myArray = ['Rock', 'Paper', 'Scissors']; 
-                return myArray[Math.floor(Math.random() * myArray.length)];
-            }
+<body>
+    <h1>Rock, Paper, Scissors</h1>
+    <script src="app.js"></script>
+</body>
 
-            function playRound (playerSelection, computerSelection) {
-                playerSelection = playerSelection.toLowerCase();
-                computerSelection = computerPlay().toLowerCase();
-
-                if (playerSelection == computerSelection) {
-                    return 'Tie Game!'
-                } else if (playerSelection == 'rock' && computerSelection == 'paper') {
-                    return 'You Lose! Paper beats rock!'
-                } else if (playerSelection == 'paper' && computerSelection == 'scissors') {
-                    return 'You Lose! Scissors beats paper!'
-                } else if (playerSelection == 'scissors' && computerSelection == 'rock') {
-                    return 'You Lose! Rock beats scissors!'
-                } else if (playerSelection == 'rock' && computerSelection == 'scissors') {
-                    return 'You Win! Rock beats scissors!'
-                } else if (playerSelection == 'paper' && computerSelection == 'rock') {
-                    return 'You Win! Paper beats rock!'
-                } else if (playerSelection == 'scissors' && computerSelection == 'paper') {
-                    return 'You Win! Scissors beats paper!'
-                }
-            }
-
-        </script>
-    </body>
 </html>
