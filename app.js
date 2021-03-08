@@ -1,6 +1,7 @@
 const btnRock = document.querySelector('#rock');
 const btnPaper = document.querySelector('#paper');
 const btnScissors = document.querySelector('#scissors');
+const btnReset = document.querySelector('#reset');
 const totalScore = document.querySelector('#totalScore');
 const results = document.querySelector('#results');
 let playerScore = document.querySelector('#playerScore');
@@ -83,6 +84,13 @@ btnScissors.addEventListener('click', function () {
     checkScore();
 })
 
+btnReset.addEventListener('click', () => reset());
+
+function reset() {
+    playerScore.innerText = 0;
+    computerScore.innerText = 0;
+    results.innerText = '';
+}
 
 
 
